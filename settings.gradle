@@ -1,0 +1,6 @@
+rootProject.name = 'CCCAT13'
+include 'protodef'
+include 'grpcServer'
+include 'accountGrpcServer'
+include 'grpcDataServer'
+

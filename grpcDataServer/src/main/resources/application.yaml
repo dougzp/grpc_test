@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    password: cccat13
+    url: jdbc:postgresql://localhost:5432/cccat13
+    username: cccat13
+  jpa:
+    database: POSTGRESQL
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  sql:
+    init:
+      platform: postgres

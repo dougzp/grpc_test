@@ -1,0 +1,41 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package com.douglas.cccat13.proto.definition;
+import "google/protobuf/timestamp.proto";
+
+service Account {
+  rpc CreateAccount(AccountRequest) returns (AccountResponse) {}
+  rpc GetAccount(GetAccountRequest) returns (GetAccountResponse) {}
+}
+
+message AccountRequest {
+  string account_id = 1;
+  string name = 2;
+  string email = 3;
+  string cpf = 4;
+  bool is_driver = 5;
+  string car_plate = 6;
+  bool is_passenger = 7;
+  google.protobuf.Timestamp date = 8;
+  bool is_verified = 9;
+  string verification_code = 10;
+}
+
+
+message AccountResponse {
+  string account_id = 1;
+}
+
+message GetAccountRequest {
+  string account_id = 1;
+}
+
+message GetAccountResponse {
+  string account_id = 1;
+  string name = 2;
+  string email = 3;
+  string cpf = 4;
+  bool is_driver = 5;
+
+}
+

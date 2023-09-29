@@ -1,0 +1,25 @@
+option java_multiple_files = true;
+
+package com.douglas.cccat13.proto.definition;
+
+
+service Rider {
+  rpc CreateRider(RiderRequest) returns (RiderResponse) {}
+ }
+
+message RiderRequest {
+  required string ride_id = 1;
+  required string driver_id = 2;
+  optional string status = 3;
+  optional string fare = 4;
+  optional string distance = 5;
+  optional string from_lat = 6;
+  optional string from_long = 7;
+  optional string to_lat = 8;
+  optional string to_long = 9;
+}
+
+
+message RiderResponse {
+  required string ride_id = 1;
+}
